@@ -6,12 +6,15 @@ import { AuthComponent } from './auth/auth.component';
 
 
 @NgModule({
-  declarations: [
-    AuthComponent
-  ],
-  imports: [
-    CommonModule,
-    AuthRoutingModule
-  ]
+    declarations: [
+        AuthComponent
+    ],
+    exports: [
+        AuthComponent
+    ],
+    imports: [
+        CommonModule,
+        AuthRoutingModule
+    ]
 })
 export class AuthModule { }
