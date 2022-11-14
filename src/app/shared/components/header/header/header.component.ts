@@ -1,4 +1,5 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {HeaderCarListService} from "../../../services/header-car-list.service";
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,14 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Output() sideNavToggled = new EventEmitter<boolean>();
+
   menuStatus: boolean = false;
 
-  constructor() { }
+  constructor(
+    public headerCarListService: HeaderCarListService
+  ) {
+
+  }
 
   ngOnInit(): void {
   }
@@ -18,4 +24,5 @@ export class HeaderComponent implements OnInit {
     this.menuStatus = !this.menuStatus;
     this.sideNavToggled.emit(this.menuStatus);
   }
+
 }

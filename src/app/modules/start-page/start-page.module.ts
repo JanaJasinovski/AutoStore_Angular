@@ -7,11 +7,13 @@ import {HeaderModule} from '../../shared/components/header/header.module';
 import {SideNavModule} from "../../shared/components/side-nav/side-nav.module";
 import {CarListComponent} from './components/car-list/car-list.component';
 import {NgxPaginationModule} from "ngx-pagination";
+import {SearchPipe} from "../../search.pipe";
 
 @NgModule({
   declarations: [
     StartPageComponent,
     CarListComponent,
+    SearchPipe,
   ],
     imports: [
         CommonModule,

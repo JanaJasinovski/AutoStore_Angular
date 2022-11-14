@@ -35,9 +35,8 @@
         </ul>
     </div>
 
-    <form class="d-flex me-5">
-        <input class="form-control me-2" type="search" placeholder="Search">
-        <button class="btn btn-outline-light" type="submit">Search</button>
+    <form class="d-flex me-5" >
+        <input  class="form-control me-2" [(ngModel)]="headerCarListService.searchStr" [ngModelOptions]="{standalone: true}" placeholder="Search cars...">
     </form>
 
     <div class="profile-logo drops tart">
